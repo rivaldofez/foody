@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:foody/src/widgets/food_category.dart';
 import 'package:foody/src/widgets/home_top_info.dart';
+import 'package:foody/src/widgets/search_field.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -17,6 +18,10 @@ class _HomeScreenState extends State<HomeScreen> {
         children: [
           HomeTopInfo(),
           FoodCategory(),
+          SizedBox(
+            height: 20.0,
+          ),
+          SearchField(),
         ],
       ),
     );
