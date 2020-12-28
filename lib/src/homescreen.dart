@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:foody/src/widgets/food_category.dart';
+import 'package:foody/src/widgets/home_top_info.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -13,30 +15,8 @@ class _HomeScreenState extends State<HomeScreen> {
       body: ListView(
         padding: EdgeInsets.only(top: 50.0, left: 20.0, right: 20.0),
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "What Would",
-                    style: textStyle,
-                  ),
-                  Text(
-                    "you like eat?",
-                    style: textStyle,
-                  ),
-                ],
-              ),
-              Icon(
-                Icons.notifications_none,
-                size: 30.0,
-                color: Theme.of(context).primaryColor,
-              ),
-            ],
-          ),
+          HomeTopInfo(),
+          FoodCategory(),
         ],
       ),
     );
